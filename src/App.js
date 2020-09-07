@@ -89,7 +89,7 @@ class App extends React.Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
-      fetch('https://fast-reef-96059.herokuapp.com/imageurl', {
+      fetch('https://noahyuen-smart-brain.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -99,7 +99,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://frozen-earth-68548.herokuapp.com/image', {
+          fetch('https://noahyuen-smart-brain.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
